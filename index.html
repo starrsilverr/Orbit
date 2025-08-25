@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat de Ultimo Año</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="chat-title"></h1>
+    <button onclick="logoutUser()" id="logout-btn">Cerrar Sesión</button>
+  </header>
+
+  <div id="user-modal" class="modal">
+    <div class="modal-content">
+      <h2>Bienvenido, por favor ingresa tu nombre</h2>
+      <input type="text" id="username-input" placeholder="Tu nombre..." autocomplete="off" />
+      <h3>Elige un avatar:</h3>
+      <div id="avatar-options">
+        <img src="https://marketplace.canva.com/C2C40/MAFlP9C2C40/1/tl/canva-female-user-avatar-MAFlP9C2C40.png" alt="Avatar 1" class="avatar-option" />
+        <img src="https://marketplace.canva.com/MADpunKMDJY/1/thumbnail_large/canva-young-woman-chatacter---person-flat-design-icon-MADpunKMDJY.png" alt="Avatar 2" class="avatar-option" />
+        <img src="https://images.icon-icons.com/2643/PNG/512/female_woman_person_people_avatar_user_white_tone_icon_159359.png" alt="Avatar 3" class="avatar-option">
+        <img src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-cartoon-color-simple-male-avatar-png-image_1934459.jpg" alt="Avatar 3" class="avatar-option" />
+        <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Avatar 4" class="avatar-option" />
+        <img src="https://cdn-icons-png.flaticon.com/512/8090/8090469.png" alt="Avatar 5" class="avatar-option" />
+      </div>
+      <button id="start-chat-btn" disabled>Entrar al Chat</button>
+    </div>
+  </div>
+
+  <main id="chat-container" style="display:none;">
+    <div id="messages"></div>
+    <div id="input-area">
+      <input type="text" id="message-input" placeholder="Escribe un mensaje..." autocomplete="off" />
+      <button id="send-btn" disabled>Enviar</button>
+    </div>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
