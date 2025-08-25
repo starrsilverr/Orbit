@@ -1,12 +1,12 @@
 //Configuracion de Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyAOaehefWcmCGPayYFbSuVDT4-LMXqQpu8",
-    authDomain: "chat-de-ultimo-anio.firebaseapp.com",
-    projectId: "chat-de-ultimo-anio",
-    storageBucket: "chat-de-ultimo-anio.firebasestorage.app",
-    messagingSenderId: "582818641162",
-    appId: "1:582818641162:web:2b45e88fc7787bc1adf6f3",
-    measurementId: "G-7B6DBWV3LH"
+     apiKey: "AIzaSyAMwjnXK9fziumz1C3ibGS3fPLZ235QqeQ",
+  authDomain: "orbit-83c06.firebaseapp.com",
+  projectId: "orbit-83c06",
+  storageBucket: "orbit-83c06.firebasestorage.app",
+  messagingSenderId: "325538309743",
+  appId: "1:325538309743:web:32a5cb5cf068b60bec8f9a",
+  measurementId: "G-KG6WS2Q4KX"
   };
 
   firebase.initializeApp(firebaseConfig);
