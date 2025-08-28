@@ -169,5 +169,7 @@ function listenForMessages() {
 // Funcion para cerrar sesion / remover datos del usuario en el LocalStorage
 function logoutUser() {
   localStorage.removeItem("chatUser");
-  location.reload(); // Volver al Modal
+window.location.href = "../index.html"; // sube un nivel
 }
+
+

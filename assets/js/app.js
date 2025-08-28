@@ -169,24 +169,11 @@ function listenForMessages() {
 // Funcion para cerrar sesion / remover datos del usuario en el LocalStorage
 function logoutUser() {
   localStorage.removeItem("chatUser");
-  window.location.href = "inicio.html"; // Redirige a la página de inicio
+window.location.href = "../index.html"; // sube un nivel
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const logoutBtn = document.getElementById("logout-btn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("chatUser");
-      window.location.href = "inicio.html"; // Redirige al inicio
-    });
-  }
 
-  const homeBtnLink = document.querySelector(".menu-btn a");
-  if (homeBtnLink) {
-    homeBtnLink.addEventListener("click", (e) => {
-      // Si querés, podés prevenir el comportamiento por defecto
-      // e.preventDefault();
-      window.location.href = "index.html"; // Redirige a la página de inicio
-    });
-  }
-});
+
+  
+
+
