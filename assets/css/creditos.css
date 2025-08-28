@@ -1,85 +1,110 @@
+/* ==============================
+   ESTILO DE CRÉDITOS PROFESIONAL
+   ============================== */
+
 body {
-   
-    background: linear-gradient(to bottom right, #4404fc, #541c94); 
-    color: #fff; 
-   
-    overflow: hidden; 
-    margin: 0; 
-    display: flex; 
+    margin: 0;
+    height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background: radial-gradient(circle at center, #1a0033, #0d001a 80%);
+    color: #fff;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
 }
 
+/* CONTENEDOR GENERAL */
 .credits-container {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     position: relative;
     overflow: hidden;
 }
 
+/* BLOQUE DE CRÉDITOS */
 .credits {
     text-align: center;
     position: absolute;
-    bottom: 0; 
-    width: 80%; 
-    left: 10%; 
-    padding-bottom: 50vh;
-    animation: scroll-credits 85s linear infinite; 
+    bottom: -100%; /* empieza oculto */
+    width: 80%;
+    left: 10%;
+    animation: scroll-credits 90s linear infinite;
+    line-height: 1.6;
 }
 
+/* TÍTULO PRINCIPAL */
 .credits h1 {
-    font-size: 3.5em; /* Título más grande */
-    margin-bottom: 2em;
-    color: #00acff; /* Color vibrante para el título */
-    text-shadow: 2px 2px 8px rgba(0, 172, 255, 0.5); /* Sombra para que resalte */
+    font-size: 3.8em;
+    margin-bottom: 1em;
+    color: #00d4ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.9),
+                 0 0 40px rgba(0, 212, 255, 0.6);
 }
 
+/* LOGO */
+.credits img {
+    max-width: 275px;
+    margin: 1.5em auto 2em;
+    display: block;
+    filter: drop-shadow(0 0 15px rgba(0, 212, 255, 0.5));
+}
+
+/* ROLES */
 .credits .role {
     font-weight: bold;
-    font-size: 1.5em; /* Rol más grande */
+    font-size: 1.6em;
     margin-top: 2.5em;
-    color: #fff; /* Blanco puro para los roles */
-    letter-spacing: 1px; /* Espaciado entre letras */
+    margin-bottom: 0.5em;
+    color: #ffd166;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 209, 102, 0.5);
 }
 
+/* NOMBRES */
 .credits p {
-    margin: 0.7em 0;
-    font-size: 1.1em;
+    margin: 0.4em 0;
+    font-size: 1.2em;
+    color: #ffffffcc; /* un poco más suave que el blanco */
 }
 
+/* TEXTO FINAL */
 .the-end {
-    font-size: 4em; /* "The End" mucho más grande */
+    font-size: 4.5em;
     margin-top: 6em;
     font-weight: bold;
-    color: #00acff; /* Mismo color vibrante que el título */
-    text-shadow: 3px 3px 10px rgba(0, 172, 255, 0.7);
-    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #00d4ff;
+    text-shadow: 0 0 25px rgba(0, 212, 255, 0.8),
+                 0 0 50px rgba(0, 212, 255, 0.5);
+    letter-spacing: 4px;
 }
 
+/* COPYRIGHT OPCIONAL */
 .copyright {
     font-size: 0.9em;
     margin-top: 3em;
-    color: rgba(255, 255, 255, 0.7); /* Texto de copyright más sutil */
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
 }
 
-/* La animación */
+/* ANIMACIÓN DE SCROLL */
 @keyframes scroll-credits {
-     from {
-        /* Inicia fuera de la pantalla, en la parte inferior */
+    from {
         transform: translateY(100%);
     }
     to {
-        /* Termina su recorrido cuando el contenido ha subido por completo */
-        transform: translateY(-100%);
+        transform: translateY(-220%);
     }
 }
 
-
-
-
-/*Media Queries para Móviles*/
-
+/* ==============================
+   RESPONSIVE
+   ============================== */
 @media (max-width: 600px) {
     .credits {
         width: 90%;

@@ -32,6 +32,15 @@ body::after {
   cursor: pointer;
   color: #fff;
   font-size: 1.2rem;
+  padding: 10px 10px;
+}
+
+.cred-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 body::before {
