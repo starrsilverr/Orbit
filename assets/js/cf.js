@@ -98,7 +98,7 @@ function sendMessage() {
   // Aqui vamos a evitar que se guarden mensajes vacios
   if (text === "") return;
 
-  db.collection("mensajes").add({
+  db.collection("mensajeS").add({
     uid: currentUser,
     name: displayName,
     photo: photoURL || "default-avatar.png",
@@ -111,7 +111,7 @@ function sendMessage() {
 
 // Aqui esta la funcion que muestra los mensajes / escucha, en tiempo real en pantalla
 function listenForMessages() {
-  db.collection("mensajes")
+  db.collection("mensajeS")
     .orderBy("createdAt")
     .onSnapshot(snapshot => {
       const messagesDiv = document.getElementById("messages");
@@ -171,22 +171,3 @@ function logoutUser() {
   localStorage.removeItem("chatUser");
   window.location.href = "inicio.html"; // Redirige a la página de inicio
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const logoutBtn = document.getElementById("logout-btn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("chatUser");
-      window.location.href = "inicio.html"; // Redirige al inicio
-    });
-  }
-
-  const homeBtnLink = document.querySelector(".menu-btn a");
-  if (homeBtnLink) {
-    homeBtnLink.addEventListener("click", (e) => {
-      // Si querés, podés prevenir el comportamiento por defecto
-      // e.preventDefault();
-      window.location.href = "inicio.html";
-    });
-  }
-});

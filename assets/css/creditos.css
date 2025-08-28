@@ -1,0 +1,104 @@
+body {
+   
+    background: linear-gradient(to bottom right, #4404fc, #541c94); 
+    color: #fff; 
+   
+    overflow: hidden; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.credits-container {
+    width: 100%;
+    height: 100%; 
+    position: relative;
+    overflow: hidden;
+}
+
+.credits {
+    text-align: center;
+    position: absolute;
+    bottom: 0; 
+    width: 80%; 
+    left: 10%; 
+    padding-bottom: 50vh;
+    animation: scroll-credits 85s linear infinite; 
+}
+
+.credits h1 {
+    font-size: 3.5em; /* Título más grande */
+    margin-bottom: 2em;
+    color: #00acff; /* Color vibrante para el título */
+    text-shadow: 2px 2px 8px rgba(0, 172, 255, 0.5); /* Sombra para que resalte */
+}
+
+.credits .role {
+    font-weight: bold;
+    font-size: 1.5em; /* Rol más grande */
+    margin-top: 2.5em;
+    color: #fff; /* Blanco puro para los roles */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.credits p {
+    margin: 0.7em 0;
+    font-size: 1.1em;
+}
+
+.the-end {
+    font-size: 4em; /* "The End" mucho más grande */
+    margin-top: 6em;
+    font-weight: bold;
+    color: #00acff; /* Mismo color vibrante que el título */
+    text-shadow: 3px 3px 10px rgba(0, 172, 255, 0.7);
+    letter-spacing: 2px;
+}
+
+.copyright {
+    font-size: 0.9em;
+    margin-top: 3em;
+    color: rgba(255, 255, 255, 0.7); /* Texto de copyright más sutil */
+}
+
+/* La animación */
+@keyframes scroll-credits {
+     from {
+        /* Inicia fuera de la pantalla, en la parte inferior */
+        transform: translateY(100%);
+    }
+    to {
+        /* Termina su recorrido cuando el contenido ha subido por completo */
+        transform: translateY(-100%);
+    }
+}
+
+
+
+
+/*Media Queries para Móviles*/
+
+@media (max-width: 600px) {
+    .credits {
+        width: 90%;
+        left: 5%;
+    }
+
+    .credits h1 {
+        font-size: 2.5em;
+    }
+
+    .credits .role {
+        font-size: 1.2em;
+    }
+
+    .credits p {
+        font-size: 1em;
+    }
+
+    .the-end {
+        font-size: 3em;
+    }
+}

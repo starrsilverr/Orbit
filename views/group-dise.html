@@ -13,15 +13,17 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
+
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 </head>
 
 <body>
+  <div class="loader"></div>
   <header>
     <h1 id="chat-title"></h1>
     <button onclick="logoutUser()" id="logout-btn">Cerrar Sesión</button>
-    <button id="menu-btn"><a href="./inicio.html"><i class="fas fa-home"></i></a></button>
+    <button class="menu-btn"><a href="./inicio.html"><i class="fa-solid fa-house"></i></a></button>
   </header>
 
   <div id="user-modal" class="modal">
@@ -38,7 +40,6 @@
         <img
           src="https://images.icon-icons.com/2643/PNG/512/female_woman_person_people_avatar_user_white_tone_icon_159359.png"
           alt="Avatar 3" class="avatar-option">
-        <img src="/assets/img/avatar6-Photoroom.png" alt="Avatar 6" class="avatar-option" />
         <img src="https://cdn-icons-png.flaticon.com/512/147/147142.png" alt="Avatar 4" class="avatar-option" />
         <img src="https://cdn-icons-png.flaticon.com/512/8090/8090469.png" alt="Avatar 5" class="avatar-option" />
       </div>
@@ -54,7 +55,14 @@
     </div>
   </main>
 
-  <script src="/assets/js/app.js"></script>
+  <script src="/Orbit/assets/js/dg.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+});
+</script>
 </body>
 
 </html>
