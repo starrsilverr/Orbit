@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homeBtnLink.addEventListener("click", (e) => {
       // Si querés, podés prevenir el comportamiento por defecto
       // e.preventDefault();
-      window.location.href = "inicio.html";
+      window.location.href = "./index.html"; // Redirige a la página de inicio
     });
   }
 });
